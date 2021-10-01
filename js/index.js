@@ -1,45 +1,50 @@
 function formCadastro(){
-    let nome = document.getElementById('nome');
-    let idade = document.getElementById('idade');
-    let genero = document.getElementById('genero');
-    let ativo = document.getElementById('ativo');
+    let data = document.getElementById('data');
+    let produtoServiço = document.getElementById('produtoServiço');
+    let valor = document.getElementById('valor');
+    let formaPgto = document.getElementById('formaPgto');
+    let fundoTroco = document.getElementById('fundoTroco');
+    let observacao = document.getElementById('observacao');
 
     let tabela = document.getElementById('tbLista');
-    let linha = tabela.insertRow();//inserindo uma nova linha na tabela
+    let linha = tabela.insertRow();
 
-    //inserindo colunas na tabela
     let cel0 = linha.insertCell(0);
     let cel1 = linha.insertCell(1);
     let cel2 = linha.insertCell(2);
     let cel3 = linha.insertCell(3);
     let cel4 = linha.insertCell(4);
     let cel5 = linha.insertCell(5);
+    let cel6 = linha.insertCell(6);
+    let cel7 = linha.insertCell(7);
 
-    //adicionando os valores às variáveis
-    cel0.innerHTML = nome.value
-    cel1.innerHTML = idade.value
-    cel2.innerHTML = genero.value
-    if(ativo.checked)
-        cel3.innerHTML = ativo.value
-    else
-        cel3.innerHTML = "";
+    cel0.innerHTML = data.value
+    cel1.innerHTML = produtoServiço.value
+    cel2.innerHTML = valor.value
+    cel3.innerHTML = formaPgto.value
+    cel4.innerHTML = fundoTroco.value
+    cel5.innerHTML = observacao.value
     
-    cel4.innerHTML = "<button class='btn btn-warning' value='Excluir' onclick='formEditar(this)'>Editar</button>"
-    cel5.innerHTML = "<button class='btn btn-danger' value='Alterar' onclick='formExcluir(this)'>Excluir</button>"
+    cel6.innerHTML = "<button class='btn btn-warning' value='Excluir' onclick='formEditar(this)'>Editar</button>"
+    cel7.innerHTML = "<button class='btn btn-danger' value='Alterar' onclick='formExcluir(this)'>Excluir</button>"
     
     limparCampos()
 }
 
 function limparCampos(){
-    let nome = document.getElementById('nome');
-    let idade = document.getElementById('idade');
-    let genero = document.getElementById('genero');
-    let ativo = document.getElementById('ativo');
+    let data = document.getElementById('data');
+    let produtoServiço = document.getElementById('produtoServiço');
+    let valor = document.getElementById('valor');
+    let formaPgto = document.getElementById('formaPgto');    
+    let fundoTroco = document.getElementById('fundoTroco');
+    let observacao = document.getElementById('observacao');
 
-    nome.value = " ";
-    idade.value = " ";
-    genero.value = "Outros";
-    ativo.value = " ";
+    data.value = " ";
+    produtoServiço.value = "";
+    valor.value = " ";
+    formaPgto.value = " "; 
+    fundoTroco.value = " ";
+    observacao.value = " ";
 }
 
 function formExcluir(obj){
@@ -54,18 +59,19 @@ function formEditar(obj){
 
     arrayChild = obj.parentNode.parentNode.childNodes;
 
-    let nome = document.getElementById('nome');
-    let idade = document.getElementById('idade');
-    let genero = document.getElementById('genero');
-    let ativo = document.getElementById('ativo');
+    let data = document.getElementById('data');
+    let produtoServiço = document.getElementById('produtoServiço');
+    let valor = document.getElementById('valor');
+    let formaPgto = document.getElementById('formaPgto');    
+    let fundoTroco = document.getElementById('fundoTroco');
+    let observacao = document.getElementById('observacao');
 
-    nome.value = arrayChild[0].innerText;
-    idade.value = arrayChild[1].innerText;
-    genero.value = arrayChild[2].innerText;
-    if(arrayChild[3].innerText != '-')
-        ativo.checked = true;
-    else
-        ativo.checked = false;
+    data.value = arrayChild[0].innerText;
+    produtoServiço.value = arrayChild[1].innerText;
+    valor.value = arrayChild[2].innerText;
+    formaPgto.value = arrayChild[3].innerText;
+    fundoTroco.value = arrayChild[4].innerText;
+    observacao.value = arrayChild[5].innerText;
 
     let btnCadastrar = document.getElementById('btnCadastrar').style.display = 'none';
     let btnCancelar = document.getElementById('btnCancelar').style.display = 'none';
@@ -74,18 +80,19 @@ function formEditar(obj){
 
 function formAlterar(){    
 
-    let nome = document.getElementById('nome');
-    let idade = document.getElementById('idade');
-    let genero = document.getElementById('genero');
-    let ativo = document.getElementById('ativo');
+    let data = document.getElementById('data');
+    let produtoServiço = document.getElementById('produtoServiço');
+    let valor = document.getElementById('valor');
+    let formaPgto = document.getElementById('formaPgto');    
+    let fundoTroco = document.getElementById('fundoTroco');
+    let observacao = document.getElementById('observacao');
 
-    arrayChild[0].innerText = nome.value;
-    arrayChild[1].innerText = idade.value;
-    arrayChild[2].innerText = genero.value;
-    if(ativo.checked)
-        arrayChild[3].innerText = ativo.value;
-    else
-        arrayChild[3].innerText = '-';
+    arrayChild[0].innerText = data.value;
+    arrayChild[1].innerText = produtoServiço.value;
+    arrayChild[2].innerText = valor.value;
+    arrayChild[3].innerText = formaPgto.value;
+    arrayChild[4].innerText = fundoTroco.value;
+    arrayChild[5].innerText = observacao.value;
 
     let btnCadastrar = document.getElementById('btnCadastrar').style.display = 'none';
     let btnCancelar = document.getElementById('btnCancelar').style.display = 'none';

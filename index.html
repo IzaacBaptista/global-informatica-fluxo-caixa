@@ -23,10 +23,16 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Caixa</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Entrada</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Buscar</a>
+                <a class="nav-link" href="saida.html">Saida</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="acumulado.html">Acumulado</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recebidos.html">Recibos</a>
               </li>
             </ul>
           </div>
@@ -38,33 +44,13 @@
       <h1>Caixa</h1>
 
       <form action="">
-        <!--<div class="form-group mt-4">
-          <label for="nome">Nome:</label>
-          <input type="text" class="form-control" id="nome" name="">
-        </div>
-        <div class="form-group mt-4">
-          <label for="idade">Idade:</label>
-          <input type="number" class="form-control" id="idade" name="idade">
-        </div>
-        <div class="form-group mt-4">
-          <label for="genero">Gênero:</label>
-          <select class="form-control" name="genero" id="genero">
-            <option value="feminino">Feminino</option>
-            <option value="masculino">Masculino</option>
-            <option value="outros" selected>Outros</option>
-          </select>
-        </div>
-        <div class="form-group form-check mt-4">
-          <input type="checkbox" class="form-check-input" id="ativo" value="Ativo">
-          <label for="Ativo" class="form-check-label">Usuário Ativo</label>
-        </div>-->
         <div class="form-group mt-4">
           <label for="data">Data:</label>
           <input type="date" class="form-control" id="data" Data="">
         </div>
         <div class="form-group mt-4">
-          <label for="produto-serviço">Produto / Serviço:</label>
-          <select class="form-control" name="produto-serviço" id="produto-serviço">
+          <label for="produtoServiço">Produto / Serviço:</label>
+          <select class="form-control" name="produto-serviço" id="produtoServiço">
             <option value="acesso-email-cliente">Acesso e-mail cliente</option>
             <option value="arte-digital">Arte digital </option>
             <option value="atividades-professora">Atividades para professora</option>
@@ -86,10 +72,10 @@
             <option value="encadernacao">Encadernação</option>
             <option value="gravacao-cds">Gravação de CDs</option>
             <option value="hinos-musicas">Hinos de músicas </option>
-            <option value="impressão">Impressão</option>
-            <option value="">Impressão de exame laboratorial</option>
+            <option value="impressao">Impressão</option>
+            <option value="impressao-exame-laboratorial">Impressão de exame laboratorial</option>
             <option value="impressao-fotos">Impressão de fotos</option>
-            <option value="">Impressão de importações do Correios</option>
+            <option value="impressao-importacoes-correios">Impressão de importações do Correios</option>
             <option value="impressao-atualizacao-boletos">Impressão e atualização de boletos</option>
             <option value="mudanca-titulariedade">Mudança de titularidade</option>
             <option value="os">OS</option>
@@ -97,11 +83,12 @@
             <option value="passar-musicas-pendrive">Passar músicas para pendrive</option>
             <option value="plastificacao">Plastificação</option>
             <option value="preenchimento-formularios-inscricoes">Preenchimento de formulários de inscrições </option>
-            <option value="solicitacao-agua">Solicitação de água</option>
             <option value="segunda-via-cpf">Segunda via CPF</option>
-            <option value="solicitacao-emissao-passaporte">Solicitação de emissão de passaporte</option>
             <option value="servico-imigrantes">Serviço de imigrantes</option>
             <option value="servicos-mei">Serviços MEI</option>
+            <option value="solicitacao-agua">Solicitação de água</option>
+            <option value="solicitacao-emissao-passaporte">Solicitação de emissão de passaporte</option>
+            <option value="solicitacao-fundema">Solicitação Fundema</option>
             <option value="outros" selected>Outros</option>
           </select>
         </div>
@@ -111,20 +98,24 @@
         </div>
         <div class="form-group mt-4">
           <label for="forma-pgto">Forma Pgto:</label>
-          <select class="form-control" name="forma-pgto" id="forma-pgto">
-            <option value="feminino">Boleto</option>
-            <option value="feminino">Crédito</option>
-            <option value="feminino">Débito</option>
-            <option value="feminino">Depósito</option>
-            <option value="feminino">Dinheiro</option>
-            <option value="feminino">Pix</option>
-            <option value="feminino">Transferência</option>
+          <select class="form-control" name="forma-pgto" id="formaPgto">
+            <option value="boleto">Boleto</option>
+            <option value="credito">Crédito</option>
+            <option value="debito">Débito</option>
+            <option value="deposito">Depósito</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="pix">Pix</option>
+            <option value="tranferencia">Transferência</option>
             <option value="outros" selected>Outros</option>
           </select>
         </div>
         <div class="form-group mt-4">
           <label for="fundo-troco">R$ Fundo Troco:</label>
-          <input type="number" class="form-control" id="fundo-troco" Data="">
+          <input type="number" class="form-control" id="fundoTroco" Data="">
+        </div>
+        <div class="form-group mt-4">
+          <label for="observacao">Observação:</label>
+          <input type="text" class="form-control" id="observacao" name="">
         </div>
         <div>
           <button type="button" class="btn btn-success mt-4" onclick="formCadastro();" id="btnCadastrar">Lançar</button>
