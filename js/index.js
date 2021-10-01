@@ -56,6 +56,8 @@ function formExcluir(obj){
 var arrayChild = '';
 
 function formEditar(obj){
+    let confirma = confirm("Deseja Editar?")
+    if(confirma)
 
     arrayChild = obj.parentNode.parentNode.childNodes;
 
