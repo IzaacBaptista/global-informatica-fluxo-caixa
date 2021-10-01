@@ -17,23 +17,16 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Caixa</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link" href="#">Buscar</a>
               </li>
             </ul>
           </div>
@@ -42,11 +35,11 @@
     </header>
 
     <div class="container mt-4">
-      <h1>Cadastro Principal</h1>
+      <h1>Caixa</h1>
 
       <form action="">
-        <div class="form-group mt-4">
-          <label for="nome">DATA:</label>
+        <!--<div class="form-group mt-4">
+          <label for="nome">Nome:</label>
           <input type="text" class="form-control" id="nome" name="">
         </div>
         <div class="form-group mt-4">
@@ -64,9 +57,77 @@
         <div class="form-group form-check mt-4">
           <input type="checkbox" class="form-check-input" id="ativo" value="Ativo">
           <label for="Ativo" class="form-check-label">Usuário Ativo</label>
+        </div>-->
+        <div class="form-group mt-4">
+          <label for="data">Data:</label>
+          <input type="date" class="form-control" id="data" Data="">
+        </div>
+        <div class="form-group mt-4">
+          <label for="produto-serviço">Produto / Serviço:</label>
+          <select class="form-control" name="produto-serviço" id="produto-serviço">
+            <option value="acesso-email-cliente">Acesso e-mail cliente</option>
+            <option value="arte-digital">Arte digital </option>
+            <option value="atividades-professora">Atividades para professora</option>
+            <option value="boletim-ocorrencia">Boletim de ocorrência</option>
+            <option value="cadstro-gov-br">Cadastro gov br</option>
+            <option value="caixa-tem">Caixa tem</option>
+            <option value="certidoes-criminais">Certidões criminais </option>
+            <option value="copia-xerox">Cópia/xerox</option>
+            <option value="declaracoes">Declarações</option>
+            <option value="declaracao-imposto-renda">Declaração imposto de renda</option>
+            <option value="detran-digital">Detran digital</option>
+            <option value="digitacao-curriculo">Digitação de currículo</option>
+            <option value="digitalizacao-documentos">Digitalização de documentos</option>
+            <option value="downloads-musicas">Downloads de musicas</option>
+            <option value="emissao-carne">Emissão de carnê</option>
+            <option value="emissao-nota-fiscal-produto">Emissão de nota fiscal de produto</option>
+            <option value="emissao-nota-fiscal-servico">Emissão de nota fiscal de serviço</option>
+            <option value="emissao-titulo-eleitor">Emissão do título eleitor</option>
+            <option value="encadernacao">Encadernação</option>
+            <option value="gravacao-cds">Gravação de CDs</option>
+            <option value="hinos-musicas">Hinos de músicas </option>
+            <option value="impressão">Impressão</option>
+            <option value="">Impressão de exame laboratorial</option>
+            <option value="impressao-fotos">Impressão de fotos</option>
+            <option value="">Impressão de importações do Correios</option>
+            <option value="impressao-atualizacao-boletos">Impressão e atualização de boletos</option>
+            <option value="mudanca-titulariedade">Mudança de titularidade</option>
+            <option value="os">OS</option>
+            <option value="parcelamento-celesc">Parcelamento de atrasados Celesc</option>
+            <option value="passar-musicas-pendrive">Passar músicas para pendrive</option>
+            <option value="plastificacao">Plastificação</option>
+            <option value="preenchimento-formularios-inscricoes">Preenchimento de formulários de inscrições </option>
+            <option value="solicitacao-agua">Solicitação de água</option>
+            <option value="segunda-via-cpf">Segunda via CPF</option>
+            <option value="solicitacao-emissao-passaporte">Solicitação de emissão de passaporte</option>
+            <option value="servico-imigrantes">Serviço de imigrantes</option>
+            <option value="servicos-mei">Serviços MEI</option>
+            <option value="outros" selected>Outros</option>
+          </select>
+        </div>
+        <div class="form-group mt-4">
+          <label for="valor">R$ Valor:</label>
+          <input type="number" class="form-control" id="valor" Data="">
+        </div>
+        <div class="form-group mt-4">
+          <label for="forma-pgto">Forma Pgto:</label>
+          <select class="form-control" name="forma-pgto" id="forma-pgto">
+            <option value="feminino">Boleto</option>
+            <option value="feminino">Crédito</option>
+            <option value="feminino">Débito</option>
+            <option value="feminino">Depósito</option>
+            <option value="feminino">Dinheiro</option>
+            <option value="feminino">Pix</option>
+            <option value="feminino">Transferência</option>
+            <option value="outros" selected>Outros</option>
+          </select>
+        </div>
+        <div class="form-group mt-4">
+          <label for="fundo-troco">R$ Fundo Troco:</label>
+          <input type="number" class="form-control" id="fundo-troco" Data="">
         </div>
         <div>
-          <button type="button" class="btn btn-success mt-4" onclick="formCadastro();" id="btnCadastrar">Cadastrar</button>
+          <button type="button" class="btn btn-success mt-4" onclick="formCadastro();" id="btnCadastrar">Lançar</button>
           <button type="button" class="btn btn-light mt-4" onclick="limparCampos();" id="btnCancelar">Cancelar</button>
           <button type="button" class="btn btn-warning mt-4" onclick="formAlterar();" id="btnEditar" style="display: none;">Editar</button>
         </div>
@@ -74,20 +135,18 @@
     </div>
     <div class="container mt-4">
       <table class="table" id="tbLista">
-        <caption>Lista de usuário</caption>
+        <caption>Folha Caixa</caption>
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Gênero</th>
-            <th>Ativo</th>
-            <th>Editar</th>
-            <th>Excluir</th>
+            <th>Data</th>
+            <th>Produto/Serviço</th>
+            <th>R$ Valor</th>
+            <th>Forma Pgto</th>
+            <th>Fundo de troco</th>
+            <th>Observação</th>
           </tr>
         </thead>
-        <tbody>
-  
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
 
